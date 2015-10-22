@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Properties to YAML Converter</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <h3 class="text-muted">Properties to YAML Converter</h3>
+    </div>
+    <div class="converter">
+        <form id="form" action="/convert" method="post" role="form">
+            <div class="form-group">
+                <label for="propertiesText">Properties</label>
+                <textarea id="propertiesText" class="form-control" rows="3" placeholder="foo.bar=100"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <div class="clearfix"></div>
+    <footer class="footer">
+        <p>&copy; Codearte 2015, Version: {{version}}</p>
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
