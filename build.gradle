@@ -10,14 +10,14 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath("gradle.plugin.com.gorylenko.gradle-git-properties:gradle-git-properties:1.4.7")
+//        classpath("gradle.plugin.com.gorylenko.gradle-git-properties:gradle-git-properties:1.4.7")
     }
 }
 
 apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
-apply plugin: 'com.gorylenko.gradle-git-properties'
+//apply plugin: 'com.gorylenko.gradle-git-properties'
 
 jar {
     baseName = 'converter'
