@@ -2,8 +2,10 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 source $OPENSHIFT_REPO_DIR/.openshift/action_hooks/common
 
-#TODO: Make it more sophisticated
-if [[ -n `ps -A | grep java` ]]; then
-    pkill -SIGTERM java
+PID=$(ps -ef | grep java.*\.jar | grep -v grep | awk '{ print $2 }')
+if [ -z "$PID" ]
+then
+    client_result "Application is already stopped"
+else
+    kill $PID
 fi
-exit 0
