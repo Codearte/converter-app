@@ -1,0 +1,8 @@
+#!/bin/bash
+# Common elements used in other scripts
+
+export GRADLE_USER_HOME=$OPENSHIFT_DATA_DIR/gradle
+export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
+export PATH=${JAVA_HOME}/bin:${PATH}
+
+export SPRING_PROFILES_ACTIVE=openshift

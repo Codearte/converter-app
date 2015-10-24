@@ -1,5 +1,6 @@
 #!/bin/bash
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
+source $OPENSHIFT_REPO_DIR/.openshift/action_hooks/common
 
 #TODO: Make it more sophisticated
 if [[ -n `ps -A | grep java` ]]; then
