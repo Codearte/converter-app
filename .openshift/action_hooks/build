@@ -1,5 +1,6 @@
 source $OPENSHIFT_REPO_DIR/.openshift/action_hooks/common
 
 cd $OPENSHIFT_REPO_DIR
-./gradlew clean build
+#test disabled as they take ages and should be already executed on Travis
+./gradlew clean build -x test
 
