@@ -4,6 +4,9 @@ angular.module('ConverterApp', ['ngRoute', 'ngResource'])
             .when('/conversion', {
                 controller: 'ConversionController',
                 templateUrl: 'views/conversion.html'
+            })
+            .otherwise({
+                redirectTo: '/conversion'
             });
         $locationProvider.html5Mode(true);
     });
