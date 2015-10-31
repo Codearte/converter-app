@@ -34,11 +34,12 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
-    compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('io.codearte.props2yaml:props2yaml:0.1')
-
-    compile 'org.webjars:bootstrap:3.3.5'
+    compile('io.codearte.props2yaml:props2yaml:0.4')
+    compile('org.webjars:bootstrap:3.3.5')
+    compile('org.webjars:angularjs:1.4.7')
+    compile('org.webjars.bower:angular-route:1.4.7')
+    compile('org.webjars.bower:angular-resource:1.4.7')
     compile('org.codehaus.groovy:groovy')
     testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
