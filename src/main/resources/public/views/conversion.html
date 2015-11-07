@@ -1,0 +1,24 @@
+<h3> Conversion data </h3>
+<form name="newConversion" novalidate class="form-horizontal">
+
+    <div class="row form-group">
+
+        <div class="row form-group">
+            <label class="col-sm-2 control-label"> Properties : </label>
+            <div class="col-sm-8">
+                <textarea ng-model="conversion.properties" rows="10" required class="form-control" />
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <label class="col-sm-2 control-label"> Yaml : </label>
+            <div class="col-sm-8">
+                <textarea ng-model="conversion.yaml" rows="10" class="form-control" />
+            </div>
+        </div>
+
+        <div class="col-sm-offset-2">
+            <button class="btn btn-primary" ng-click="save()"> Make Conversion</button>
+        </div>
+    </div>
+</form>
