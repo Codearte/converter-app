@@ -43,3 +43,22 @@ dependencies {
     compile('org.codehaus.groovy:groovy')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+task assembleOpenShiftDeployPackage(type: Tar) {
+    baseName "${jar.baseName}-openshift-deploy"
+    compression Compression.GZIP
+    from(projectDir) {
+        include '.openshift/', 'misc/'
+    }
+    from(projectDir) {
+        include "build/libs/${jar.baseName}*.jar"   //TODO: Simplify with file reference
+        includeEmptyDirs false
+        eachFile { fileCopyDetails ->
+            println "----" + fileCopyDetails
+            fileCopyDetails.path = "repo/${fileCopyDetails.name}"
+        }
+    }
+    into 'repo/'
+}
+
+assembleOpenShiftDeployPackage.dependsOn { assemble }

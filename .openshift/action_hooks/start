@@ -6,6 +6,5 @@
 source $OPENSHIFT_REPO_DIR/.openshift/action_hooks/common
 
 cd $OPENSHIFT_REPO_DIR
-#switch to ./gradlew bootRun?
-java -jar build/libs/*.jar |& /usr/bin/logshifter &
+java -jar converter*.jar |& /usr/bin/logshifter &
 
